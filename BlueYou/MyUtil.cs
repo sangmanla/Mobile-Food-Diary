@@ -14,7 +14,7 @@ using Java.IO;
 using Android.Graphics;
 using Android.Support.V7.App;
 
-namespace FoodDiary {
+namespace fooddiary {
     public class MyUtil {
         public static string DATABASE_DIRECTORY = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
         public static string DATABASE_FILE_NAME = "Meal.db3";

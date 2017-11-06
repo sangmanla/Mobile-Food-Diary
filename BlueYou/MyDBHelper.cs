@@ -14,7 +14,7 @@ using static Android.Database.Sqlite.SQLiteDatabase;
 using System.IO;
 using SQLite;
 
-namespace FoodDiary {
+namespace fooddiary {
     public class MyDBHelper : SQLiteOpenHelper {
         private static int VERSION = 1;
         private Context context = null;

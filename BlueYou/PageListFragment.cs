@@ -12,7 +12,7 @@ using Android.App;
 using Android.Graphics;
 using FFImageLoading;
 
-namespace FoodDiary {
+namespace fooddiary {
     public class PageListFragment : MyFragment{
         protected List<Meal> list;
         public override View GetCurrentView(LayoutInflater inflater, ViewGroup container) {

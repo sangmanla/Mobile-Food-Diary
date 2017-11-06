@@ -12,7 +12,7 @@ using Android.Widget;
 using Java.Lang;
 using SQLite;
 
-namespace FoodDiary {
+namespace fooddiary {
     public class Meal {
         public Meal() {
 

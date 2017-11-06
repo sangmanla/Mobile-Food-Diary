@@ -15,7 +15,7 @@ using Android.Graphics;
 using SQLite;
 using FFImageLoading;
 
-namespace FoodDiary {
+namespace fooddiary {
     public class MainListAdaptor : BaseAdapter<PickedMeal>{
         List<PickedMeal> items;
         View globalView;

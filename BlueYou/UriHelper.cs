@@ -5,7 +5,7 @@ using Android.Database;
 using DroidEnv = Android.OS.Environment;
 using DroidUri = Android.Net.Uri;
 
-namespace FoodDiary {
+namespace fooddiary {
     /**
      * Retreive from https://stackoverflow.com/questions/29740029/xamarin-android-choose-image-from-gallery-and-get-its-path?answertab=votes#tab-top
      */

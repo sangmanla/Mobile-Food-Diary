@@ -14,7 +14,7 @@ using System.IO;
 using Android.Graphics;
 using SQLite;
 
-namespace FoodDiary {
+namespace fooddiary {
     public class ListAdaptor : BaseAdapter<Meal> {
         public List<Meal> items;
         View globalView;

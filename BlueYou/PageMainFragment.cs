@@ -11,7 +11,7 @@ using Android.App;
 using FFImageLoading;
 using FFImageLoading.Work;
 
-namespace FoodDiary {
+namespace fooddiary {
     public class PageMainFragment : MyFragment {
         private static List<PickedMeal> list;
         private static List<PickedMeal> upList;

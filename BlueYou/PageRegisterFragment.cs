@@ -12,7 +12,7 @@ using Android.Graphics;
 using Android.Runtime;
 using FFImageLoading;
 
-namespace FoodDiary {
+namespace fooddiary {
     public class PageRegisterFragment : MyFragment {
         public static bool dataChanged = true;
 

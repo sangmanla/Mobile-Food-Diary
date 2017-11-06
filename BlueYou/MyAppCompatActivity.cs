@@ -12,7 +12,7 @@ using Android.Widget;
 using Android.Graphics;
 using Android.Views.InputMethods;
 
-namespace FoodDiary {
+namespace fooddiary {
     [Activity(Label = "FoodDiary", MainLauncher = true, Theme = "@style/MyTheme")] // , Icon = "@drawable/icon", 
     public class MyAppCompatActivity : AppCompatActivity {
         public static PAGE CURRENT_PAGE = PAGE.HOME;

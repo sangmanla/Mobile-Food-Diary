@@ -12,7 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 
-namespace FoodDiary {
+namespace fooddiary {
     public abstract class MyFragment : Fragment {
         protected Dialog dialog = null;
         
