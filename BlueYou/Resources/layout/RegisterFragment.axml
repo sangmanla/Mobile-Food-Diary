@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:padding="10dp"
+    android:background="@drawable/registerTable"
+    android:drawingCacheQuality="low">
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:alpha="0.9"
+        android:padding="15dp"
+        android:background="@drawable/table">
+        <TableRow
+            android:id="@+id/tableRow1">
+            <EditText
+                android:id="@+id/foodName"
+                android:layout_width="wrap_content"
+                android:background="#DDDDDD"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:hint="Name"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                style="@style/common_font"
+                android:textSize="15dp"
+                android:width="100dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_marginTop="5dp">
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:numStars="5"
+                android:secondaryProgressTint="#ffffffff"
+                android:stepSize="1"
+                android:rating="3"
+                android:progressTint="#ffef6d00"
+                android:progressBackgroundTint="#ffdcdcdc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:layout_gravity="center_horizontal" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_span="2"
+            android:layout_marginTop="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Button
+                    android:text="B"
+                    android:id="@+id/morningBtn"
+                    style="@style/button_option"
+                    android:background="@drawable/unchoosen"
+                    android:fontFamily="sans-serif-medium" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Button
+                    android:text="L"
+                    android:id="@+id/LunchBtn"
+                    style="@style/button_option"
+                    android:background="@drawable/choosen"
+                    android:fontFamily="sans-serif-medium" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Button
+                    android:text="D"
+                    android:id="@+id/dinnerBtn"
+                    style="@style/button_option"
+                    android:background="@drawable/unchoosen"
+                    android:fontFamily="sans-serif-medium" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Button
+                    android:text="S"
+                    android:id="@+id/firstSnackBtn"
+                    style="@style/button_option"
+                    android:background="@drawable/unchoosen"
+                    android:fontFamily="sans-serif-medium" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_marginTop="5dp">
+            <RelativeLayout>
+                <FFImageLoading.Views.ImageViewAsync
+                    android:id="@+id/myImageView"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="#DDDDDD" />
+                <TextView
+                    android:id="@+id/myImageViewText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/myImageView"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    android:text="Add Image"
+                    android:textColor="#555555"
+                    android:textSize="15dp"
+                    style="@style/common_font"
+                    android:layout_alignLeft="@+id/myImageView"
+                    android:padding="5dp" />
+            </RelativeLayout>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_marginTop="5dp">
+            <EditText
+                android:id="@+id/comments"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:background="#DDDDDD"
+                android:gravity="top"
+                android:hint="Description"
+                android:textSize="15dp"
+                style="@style/common_font"
+                android:scrollHorizontally="true"
+                android:padding="5dp"
+                android:width="100dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Button
+                    android:text="Save"
+                    android:clickable="true"
+                    android:background="@drawable/buttons"
+                    style="@style/button_text"
+                    android:id="@+id/saveBtn"
+                    android:layout_width="150dp"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="90dp"
+                    android:fontFamily="sans-serif-medium" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <Button
+                    android:text="Cancel"
+                    android:clickable="true"
+                    android:background="@drawable/buttons"
+                    style="@style/button_text"
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="150dp"
+                    android:layout_gravity="right"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_toEndOf="@+id/saveBtn" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

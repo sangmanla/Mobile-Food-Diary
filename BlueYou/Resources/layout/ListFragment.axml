@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:id="@+id/ListGridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <SearchView
+            android:gravity="center_horizontal"
+            android:id="@+id/searchView"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_gravity="fill_horizontal"
+            android:background="#ef8d00"
+            android:clickable="true" />
+        <ListView
+            android:layout_width="match_parent"
+            android:id="@+id/searchList"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dp"
+            android:layout_gravity="top" />
+    </LinearLayout>
+</ScrollView>
