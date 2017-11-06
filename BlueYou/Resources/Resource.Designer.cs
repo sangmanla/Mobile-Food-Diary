@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("FoodDiary.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("fooddiary.Resource", IsApplication=true)]
 
-namespace FoodDiary
+namespace fooddiary
 {
 	
 	
