@@ -13,8 +13,11 @@ using System.IO;
 using Java.IO;
 using Android.Graphics;
 using Android.Support.V7.App;
+using Android.Views.InputMethods;
+using SQLite;
+using System.Threading.Tasks;
 
-namespace fooddiary {
+namespace mealdiary {
     public class MyUtil {
         public static string DATABASE_DIRECTORY = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
         public static string DATABASE_FILE_NAME = "Meal.db3";
@@ -89,26 +92,43 @@ namespace fooddiary {
 
             FragmentTransaction ft = fragment.FragmentManager.BeginTransaction();
 
-            if (page == PAGE.HOME && !(fragment is PageMainFragment)) {
+            if (page == PAGE.HOME) {
                 ft.Replace(Resource.Id.page_placeholder, new PageMainFragment(), MyFragment.PAGE_CONTENT);
-            } else if (page == PAGE.REGI && !(fragment is PageRegisterFragment)) {
+            } else if (page == PAGE.REGI) {
                 ft.Replace(Resource.Id.page_placeholder, new PageRegisterFragment(), MyFragment.PAGE_CONTENT);
-            } else if (page == PAGE.LIST && !(fragment is PageListFragment)) {
+            } else if (page == PAGE.LIST) {
                 ft.Replace(Resource.Id.page_placeholder, new PageListFragment(), MyFragment.PAGE_CONTENT);
             }
             ft.Commit();
         }
         public static string GetType(Meal item) {
             switch (item.Type) {
-                case 0: return "Morning";
-                case 1: return "Lunch";
-                case 2: return "Dinner";
+                case 1: return "Morning";
+                case 2: return "Lunch";
+                case 3: return "Dinner";
                 default: return "Snack";
             }
         }
-    }
 
-    
+        public static void HideSoftKeyboard(Activity act) {
+            View view = act.CurrentFocus;
+            if (view != null) {
+                InputMethodManager imm = (InputMethodManager)act.GetSystemService(Context.InputMethodService);
+                imm.HideSoftInputFromWindow(view.WindowToken, 0);
+            }
+        }
+
+        public async static Task<string> DeleteItem(int id) {
+            try {
+                var db = new SQLiteAsyncConnection(MyUtil.DB_PATH);
+                await db.DeleteAsync(new Meal(id));
+                return "Success";
+            }
+            catch (Exception ex) {
+                return ex.Message;
+            }
+        }
+    }
 
     public enum PAGE { HOME, REGI, LIST };
 }

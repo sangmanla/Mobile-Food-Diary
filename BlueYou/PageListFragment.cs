@@ -12,9 +12,11 @@ using Android.App;
 using Android.Graphics;
 using FFImageLoading;
 
-namespace fooddiary {
+namespace mealdiary {
     public class PageListFragment : MyFragment{
         protected List<Meal> list;
+        public static bool fromList = false;
+        public static Meal meal = null;
         public override View GetCurrentView(LayoutInflater inflater, ViewGroup container) {
             return inflater.Inflate(Resource.Layout.ListFragment, container, false); ;
         }
@@ -40,7 +42,7 @@ namespace fooddiary {
         }
 
         private async void _searchView_QueryTextSubmit(object sender, SearchView.QueryTextSubmitEventArgs e) {
-            InputMethodManager imm = (InputMethodManager)view.Context.GetSystemService("input_method");
+            InputMethodManager imm = (InputMethodManager)Context.GetSystemService("input_method");
             imm.HideSoftInputFromWindow(((SearchView)sender).WindowToken, HideSoftInputFlags.None);
             e.Handled = true;
 
@@ -78,7 +80,7 @@ namespace fooddiary {
             for (int i=0;i< listView.ChildCount; i++) listView.GetChildAt(i).SetBackgroundColor(Color.Transparent);
             e.View.SetBackgroundColor(Color.Orange);
 
-            Meal meal = list[e.Position];
+            meal = list[e.Position];
 
             // custom dialog
             if (dialog == null) dialog = new Dialog(view.Context);
@@ -97,9 +99,25 @@ namespace fooddiary {
                         .ErrorPlaceholder("error.png", FFImageLoading.Work.ImageSource.CompiledResource)
                         .Into(imageView);
             }
+
+            dialog.FindViewById<Button>(Resource.Id.goModifyBtn).Click += GoModifyPage;
+            dialog.FindViewById<Button>(Resource.Id.deleteBtn).Click += DeleteCurrentItem;
             dialog.CancelEvent += closeDialog;
 
             dialog.Show();
+        }
+
+        public void GoModifyPage(object sender, EventArgs e) {
+            fromList = true;
+            MyUtil.GoPage(this, PAGE.REGI);
+            dialog.Dismiss();
+        }
+
+        public async void DeleteCurrentItem(object sender, EventArgs e) {
+            string result = await MyUtil.DeleteItem(meal.ID);
+            Toast.MakeText(this.Context, "Delete successfully!", ToastLength.Short).Show();
+            dialog.Dismiss();
+            await GetList();
         }
 
         private void closeDialog(object sender, EventArgs e) {

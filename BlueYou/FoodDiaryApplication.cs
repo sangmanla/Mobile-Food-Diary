@@ -10,11 +10,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace fooddiary {
+namespace mealdiary {
     [Application]
-    public class FoodDiaryApplication : Application {
+    public class MealDiaryApplication : Application {
 
-        public FoodDiaryApplication(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer) {
+        public MealDiaryApplication(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer) {
         }
 
         public override void OnCreate() {

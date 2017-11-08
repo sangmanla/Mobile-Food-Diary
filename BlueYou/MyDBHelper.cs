@@ -14,9 +14,9 @@ using static Android.Database.Sqlite.SQLiteDatabase;
 using System.IO;
 using SQLite;
 
-namespace fooddiary {
+namespace mealdiary {
     public class MyDBHelper : SQLiteOpenHelper {
-        private static int VERSION = 1;
+        private static int VERSION = 3; // 디비 스키마 변경 시 버전을 올려줘야 onUpgrade가 호출됨. 
         private Context context = null;
         SQLiteDatabase db;
 
@@ -49,7 +49,7 @@ namespace fooddiary {
             //if (oldVersion < 3) {
             //    //perform any database upgrade tasks for versions prior to  version 3
             //}
-            OnCreate(db);
+            //OnCreate(db);
         }
     }
 }

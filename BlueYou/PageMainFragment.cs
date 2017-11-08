@@ -10,9 +10,11 @@ using Android.Graphics;
 using Android.App;
 using FFImageLoading;
 using FFImageLoading.Work;
+using Android.Support.Design.Widget;
 
-namespace fooddiary {
+namespace mealdiary {
     public class PageMainFragment : MyFragment {
+        public static PickedMeal meal;
         private static List<PickedMeal> list;
         private static List<PickedMeal> upList;
         private static List<PickedMeal> downList;
@@ -24,11 +26,11 @@ namespace fooddiary {
         public override void OnViewCreated(View view, Bundle savedInstanceState) {
             base.OnViewCreated(view, savedInstanceState);
 
-            if (PageRegisterFragment.dataChanged) { 
-                list = RearangeList(GetNameDistributed(getAllForOneMonth()));
-                PageRegisterFragment.dataChanged = false;
-            }
+            GetDataList();
+        }
 
+        private void GetDataList() {
+            list = RearangeList(GetNameDistributed(getAllForOneMonth()));
             ShowTop5RecordsForOneMonth(list);
             ShowFrq5RecordsForOneMonth(list);
         }
@@ -70,7 +72,7 @@ namespace fooddiary {
             for(int i = 0; i < listView.ChildCount; i++) listView.GetChildAt(i).SetBackgroundColor(Color.Transparent);
             e.View.SetBackgroundColor(Color.LightGray);
 
-            PickedMeal meal = list[e.Position];
+            meal = list[e.Position];
 
             // custom dialog
             if (dialog == null) dialog = new Dialog(view.Context, Resource.Style.Dialog);
@@ -79,7 +81,6 @@ namespace fooddiary {
             dialog.FindViewById<TextView>(Resource.Id.viewFoodName).Text = meal.Name;
             dialog.FindViewById<RatingBar>(Resource.Id.viewRatingBar).Rating = meal.Rate;
             dialog.FindViewById<TextView>(Resource.Id.viewMealType).Text = meal.CreateDate.ToString("yyyy-MM-dd") + " / " + MyUtil.GetType(meal);
-
 
             FFImageLoading.Views.ImageViewAsync imageView = dialog.FindViewById<FFImageLoading.Views.ImageViewAsync>(Resource.Id.viewImageView);
             if (!string.IsNullOrWhiteSpace(meal.ImageName)) {
@@ -91,6 +92,8 @@ namespace fooddiary {
                         .Into(imageView);
             } else ImageService.Instance.LoadCompiledResource("noImage.png").Into(imageView);
 
+            dialog.FindViewById<LinearLayout>(Resource.Id.firstLineInViewInformation).LayoutParameters 
+                = new TableRow.LayoutParams(LinearLayout.LayoutParams.MatchParent, 0);
             dialog.CancelEvent += closeDialog;
             dialog.Show();
         }
@@ -119,7 +122,8 @@ namespace fooddiary {
                     }
                 }
                 if (selectedPickedMeal == null) {
-                    pickedMealList.Add(new PickedMeal(meal.Name, meal.Rate, meal.ImageName, meal.CreateDate, meal.Comments));
+                    // 메인은 통계적인 정보를 보여주는 건데, 개별 아이템에 날짜/type 정보를 보여주기 애매해서 일단 첫번째 데이터로 뿌려줌
+                    pickedMealList.Add(new PickedMeal(meal.Name, meal.Rate, meal.ImageName, meal.CreateDate, meal.Comments, meal.Type));
                 } else {
                     selectedPickedMeal.AddRate(meal.Rate);
                     selectedPickedMeal.AddCount();
@@ -148,7 +152,8 @@ namespace fooddiary {
         private static Task<List<Meal>> getAllForOneMonth() {
             string sql = "SELECT * " +
                 "FROM MEAL WHERE datetime(CREATEDATE/10000000 - 62135596800, 'unixepoch') >= DATETIME('NOW', '-1 MONTH') " +
-                "OR CREATEDATE IS NULL ";
+                "OR CREATEDATE IS NULL " +
+                "ORDER BY CREATEDATE DESC ";
             return (new SQLiteAsyncConnection(MyUtil.DB_PATH)).QueryAsync<Meal>(sql);
         }
     }
@@ -156,12 +161,13 @@ namespace fooddiary {
     public class PickedMeal : Meal {
         
         public PickedMeal() { }
-        public PickedMeal(string name, float rate, string imageName, DateTime createdate, string comments) {
+        public PickedMeal(string name, float rate, string imageName, DateTime createdate, string comments, int type) {
             Name = name;
             Rate = rate;
             ImageName = imageName;
             CreateDate = createdate;
             Comments = comments;
+            Type = type;
         }
         public new float Rate { get; set; }
         public int Count { get; set; } = 1;

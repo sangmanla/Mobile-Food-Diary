@@ -12,8 +12,8 @@ using Android.Widget;
 using Android.Graphics;
 using Android.Views.InputMethods;
 
-namespace fooddiary {
-    [Activity(Label = "FoodDiary", MainLauncher = true, Theme = "@style/MyTheme")] // , Icon = "@drawable/icon", 
+namespace mealdiary {
+    [Activity(Label = "MealDiary", MainLauncher = true, Theme = "@style/MyTheme")] // , Icon = "@drawable/icon", 
     public class MyAppCompatActivity : AppCompatActivity {
         public static PAGE CURRENT_PAGE = PAGE.HOME;
         protected DrawerLayout drawerLayout;
@@ -61,11 +61,7 @@ namespace fooddiary {
         public override bool OnOptionsItemSelected(IMenuItem item) {
             MyFragment fragement = FragmentManager.FindFragmentByTag<MyFragment>(MyFragment.PAGE_CONTENT);
 
-            View view = this.CurrentFocus;
-            if (view != null) {
-                InputMethodManager imm = (InputMethodManager)GetSystemService(Context.InputMethodService);
-                imm.HideSoftInputFromWindow(view.WindowToken, 0);
-            }
+            MyUtil.HideSoftKeyboard(this);
 
             switch (item.ItemId) {
                 case Resource.Id.nav_home:
@@ -77,7 +73,7 @@ namespace fooddiary {
                 case Resource.Id.nav_list:
                     MyUtil.GoPage(fragement, PAGE.LIST);
                     return true;
-                default :
+                default:
                     if (drawerLayout.IsDrawerOpen(navigationView)) drawerLayout.CloseDrawers();
                     else drawerLayout.OpenDrawer(navigationView);
                     return true;

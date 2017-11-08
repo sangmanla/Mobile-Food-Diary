@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace fooddiary {
+namespace mealdiary {
     public class DatePickerFragment : DialogFragment, DatePickerDialog.IOnDateSetListener {
         // TAG can be any string of your choice.
         public static readonly string TAG = "X:" + typeof(DatePickerFragment).Name.ToUpper();

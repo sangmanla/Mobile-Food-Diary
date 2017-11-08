@@ -15,7 +15,7 @@ using static Android.App.ActivityManager;
  * 초기에 slide로 화면 띄우는 시도 하려고 만들었던 클래스인데, 
  * 좌측 상단 네비게이션 넣으면서 안쓰게 됨. 나중에 쓰려고 남겨둠.
  */ 
-namespace fooddiary {
+namespace mealdiary {
     [Activity(Label = "SwipeManager")]
     public class SwipeActivity : Activity, GestureDetector.IOnGestureListener {
         private GestureDetector _gestureDetector;
