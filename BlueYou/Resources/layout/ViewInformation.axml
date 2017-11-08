@@ -8,6 +8,43 @@
     android:alpha="0.9"
     android:background="@drawable/ViewInformation">
     <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:id="@+id/firstLineInViewInformation"
+            android:layout_gravity="right">
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <Button
+                android:id="@+id/goModifyBtn"
+                android:background="@drawable/modify"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:layout_margin="5dp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+            <Button
+                android:id="@+id/deleteBtn"
+                android:background="@drawable/delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:layout_margin="5dp" />
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </TableRow>
+    <TableRow
         android:id="@+id/tableRow4">
         <FFImageLoading.Views.ImageViewAsync
             android:id="@+id/viewImageView"

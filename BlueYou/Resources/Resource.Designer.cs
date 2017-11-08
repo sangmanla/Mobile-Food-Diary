@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("fooddiary.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("mealdiary.Resource", IsApplication=true)]
 
-namespace fooddiary
+namespace mealdiary
 {
 	
 	
@@ -1990,37 +1990,37 @@ namespace fooddiary
 			public const int abc_vector_test = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int back = 2130837587;
+			public const int add = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int bg = 2130837588;
+			public const int border_set_main_list = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int border_set_main_list = 2130837589;
+			public const int buttonForSearch = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int buttonForSearch = 2130837590;
+			public const int buttons = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int buttons = 2130837591;
+			public const int choosen = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int choosen = 2130837592;
+			public const int Delete = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int close = 2130837593;
+			public const int design_fab_background = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int design_fab_background = 2130837594;
+			public const int design_ic_visibility = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int design_ic_visibility = 2130837595;
+			public const int design_snackbar_background = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int design_snackbar_background = 2130837596;
+			public const int error = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int error = 2130837597;
+			public const int home = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
 			public const int Icon = 2130837598;
@@ -2038,19 +2038,19 @@ namespace fooddiary
 			public const int mainListBorder = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int navi_icon = 2130837603;
+			public const int Modify = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int navigation_empty_icon = 2130837604;
+			public const int navi_icon = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int noImage = 2130837605;
+			public const int navigation_empty_icon = 2130837605;
+			
+			// aapt resource value: 0x7f020066
+			public const int noImage = 2130837606;
 			
 			// aapt resource value: 0x7f02006c
 			public const int notification_template_icon_bg = 2130837612;
-			
-			// aapt resource value: 0x7f020066
-			public const int reg = 2130837606;
 			
 			// aapt resource value: 0x7f020067
 			public const int registerTable = 2130837607;
@@ -2083,8 +2083,8 @@ namespace fooddiary
 			// aapt resource value: 0x7f060082
 			public const int ListGridLayout = 2131099778;
 			
-			// aapt resource value: 0x7f06009f
-			public const int LunchBtn = 2131099807;
+			// aapt resource value: 0x7f0600a2
+			public const int LunchBtn = 2131099810;
 			
 			// aapt resource value: 0x7f060073
 			public const int Text = 2131099763;
@@ -2164,8 +2164,8 @@ namespace fooddiary
 			// aapt resource value: 0x7f060047
 			public const int buttonPanel = 2131099719;
 			
-			// aapt resource value: 0x7f0600a9
-			public const int cancelBtn = 2131099817;
+			// aapt resource value: 0x7f0600ac
+			public const int cancelBtn = 2131099820;
 			
 			// aapt resource value: 0x7f06008d
 			public const int cancel_action = 2131099789;
@@ -2194,8 +2194,8 @@ namespace fooddiary
 			// aapt resource value: 0x7f060020
 			public const int collapseActionView = 2131099680;
 			
-			// aapt resource value: 0x7f0600a6
-			public const int comments = 2131099814;
+			// aapt resource value: 0x7f0600a9
+			public const int comments = 2131099817;
 			
 			// aapt resource value: 0x7f06004d
 			public const int contentPanel = 2131099725;
@@ -2212,6 +2212,9 @@ namespace fooddiary
 			// aapt resource value: 0x7f060043
 			public const int default_activity_button = 2131099715;
 			
+			// aapt resource value: 0x7f0600b0
+			public const int deleteBtn = 2131099824;
+			
 			// aapt resource value: 0x7f060079
 			public const int design_bottom_sheet = 2131099769;
 			
@@ -2227,8 +2230,8 @@ namespace fooddiary
 			// aapt resource value: 0x7f06007d
 			public const int design_navigation_view = 2131099773;
 			
-			// aapt resource value: 0x7f0600a0
-			public const int dinnerBtn = 2131099808;
+			// aapt resource value: 0x7f0600a3
+			public const int dinnerBtn = 2131099811;
 			
 			// aapt resource value: 0x7f06000e
 			public const int disableHome = 2131099662;
@@ -2269,14 +2272,20 @@ namespace fooddiary
 			// aapt resource value: 0x7f06002f
 			public const int fill_vertical = 2131099695;
 			
-			// aapt resource value: 0x7f0600a1
-			public const int firstSnackBtn = 2131099809;
+			// aapt resource value: 0x7f0600ae
+			public const int firstLineInViewInformation = 2131099822;
+			
+			// aapt resource value: 0x7f0600a4
+			public const int firstSnackBtn = 2131099812;
 			
 			// aapt resource value: 0x7f06003b
 			public const int @fixed = 2131099707;
 			
-			// aapt resource value: 0x7f06009a
-			public const int foodName = 2131099802;
+			// aapt resource value: 0x7f06009c
+			public const int foodName = 2131099804;
+			
+			// aapt resource value: 0x7f0600af
+			public const int goModifyBtn = 2131099823;
 			
 			// aapt resource value: 0x7f060005
 			public const int home = 2131099653;
@@ -2356,26 +2365,26 @@ namespace fooddiary
 			// aapt resource value: 0x7f06003a
 			public const int mini = 2131099706;
 			
-			// aapt resource value: 0x7f06009e
-			public const int morningBtn = 2131099806;
+			// aapt resource value: 0x7f0600a1
+			public const int morningBtn = 2131099809;
 			
 			// aapt resource value: 0x7f060016
 			public const int multiply = 2131099670;
 			
-			// aapt resource value: 0x7f0600a3
-			public const int myImageView = 2131099811;
+			// aapt resource value: 0x7f0600a6
+			public const int myImageView = 2131099814;
 			
-			// aapt resource value: 0x7f0600a4
-			public const int myImageViewText = 2131099812;
+			// aapt resource value: 0x7f0600a7
+			public const int myImageViewText = 2131099815;
 			
-			// aapt resource value: 0x7f0600b1
-			public const int nav_home = 2131099825;
+			// aapt resource value: 0x7f0600b7
+			public const int nav_home = 2131099831;
 			
-			// aapt resource value: 0x7f0600b3
-			public const int nav_list = 2131099827;
+			// aapt resource value: 0x7f0600b9
+			public const int nav_list = 2131099833;
 			
-			// aapt resource value: 0x7f0600b2
-			public const int nav_register = 2131099826;
+			// aapt resource value: 0x7f0600b8
+			public const int nav_register = 2131099832;
 			
 			// aapt resource value: 0x7f060071
 			public const int nav_view = 2131099761;
@@ -2413,17 +2422,23 @@ namespace fooddiary
 			// aapt resource value: 0x7f060057
 			public const int radio = 2131099735;
 			
-			// aapt resource value: 0x7f06009c
-			public const int ratingBar = 2131099804;
+			// aapt resource value: 0x7f06009e
+			public const int ratingBar = 2131099806;
 			
 			// aapt resource value: 0x7f06008a
 			public const int recentDate = 2131099786;
 			
+			// aapt resource value: 0x7f0600a0
+			public const int regCreateDate = 2131099808;
+			
+			// aapt resource value: 0x7f06009a
+			public const int registerTableId = 2131099802;
+			
 			// aapt resource value: 0x7f060031
 			public const int right = 2131099697;
 			
-			// aapt resource value: 0x7f0600a8
-			public const int saveBtn = 2131099816;
+			// aapt resource value: 0x7f0600ab
+			public const int saveBtn = 2131099819;
 			
 			// aapt resource value: 0x7f060017
 			public const int screen = 2131099671;
@@ -2439,6 +2454,9 @@ namespace fooddiary
 			
 			// aapt resource value: 0x7f06004f
 			public const int scrollView = 2131099727;
+			
+			// aapt resource value: 0x7f060099
+			public const int scrollViewaaa = 2131099801;
 			
 			// aapt resource value: 0x7f06003c
 			public const int scrollable = 2131099708;
@@ -2533,23 +2551,23 @@ namespace fooddiary
 			// aapt resource value: 0x7f06000d
 			public const int tabMode = 2131099661;
 			
-			// aapt resource value: 0x7f060099
-			public const int tableRow1 = 2131099801;
-			
 			// aapt resource value: 0x7f06009b
-			public const int tableRow2 = 2131099803;
+			public const int tableRow1 = 2131099803;
 			
 			// aapt resource value: 0x7f06009d
-			public const int tableRow3 = 2131099805;
+			public const int tableRow2 = 2131099805;
 			
-			// aapt resource value: 0x7f0600a2
-			public const int tableRow4 = 2131099810;
+			// aapt resource value: 0x7f06009f
+			public const int tableRow3 = 2131099807;
 			
 			// aapt resource value: 0x7f0600a5
-			public const int tableRow5 = 2131099813;
+			public const int tableRow4 = 2131099813;
 			
-			// aapt resource value: 0x7f0600a7
-			public const int tableRow6 = 2131099815;
+			// aapt resource value: 0x7f0600a8
+			public const int tableRow5 = 2131099816;
+			
+			// aapt resource value: 0x7f0600aa
+			public const int tableRow6 = 2131099818;
 			
 			// aapt resource value: 0x7f060096
 			public const int text = 2131099798;
@@ -2590,26 +2608,26 @@ namespace fooddiary
 			// aapt resource value: 0x7f060014
 			public const int useLogo = 2131099668;
 			
-			// aapt resource value: 0x7f0600b0
-			public const int viewComments = 2131099824;
+			// aapt resource value: 0x7f0600b6
+			public const int viewComments = 2131099830;
 			
-			// aapt resource value: 0x7f0600ac
-			public const int viewFoodName = 2131099820;
+			// aapt resource value: 0x7f0600b2
+			public const int viewFoodName = 2131099826;
 			
-			// aapt resource value: 0x7f0600ab
-			public const int viewImageView = 2131099819;
+			// aapt resource value: 0x7f0600b1
+			public const int viewImageView = 2131099825;
 			
-			// aapt resource value: 0x7f0600ae
-			public const int viewMealType = 2131099822;
+			// aapt resource value: 0x7f0600b4
+			public const int viewMealType = 2131099828;
+			
+			// aapt resource value: 0x7f0600b3
+			public const int viewNameHeader = 2131099827;
+			
+			// aapt resource value: 0x7f0600b5
+			public const int viewRatingBar = 2131099829;
 			
 			// aapt resource value: 0x7f0600ad
-			public const int viewNameHeader = 2131099821;
-			
-			// aapt resource value: 0x7f0600af
-			public const int viewRatingBar = 2131099823;
-			
-			// aapt resource value: 0x7f0600aa
-			public const int viewTableId = 2131099818;
+			public const int viewTableId = 2131099821;
 			
 			// aapt resource value: 0x7f06000a
 			public const int view_offset_helper = 2131099658;
@@ -4100,6 +4118,9 @@ namespace fooddiary
 			
 			// aapt resource value: 0x7f080169
 			public const int common_font = 2131231081;
+			
+			// aapt resource value: 0x7f08016f
+			public const int leftMenuStyle = 2131231087;
 			
 			static Style()
 			{
