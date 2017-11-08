@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="fooddiary.fooddiary" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="mealdiary.mealdiary" android:versionCode="1" android:installLocation="auto" android:versionName="1">
 	<uses-sdk android:minSdkVersion="24" android:targetSdkVersion="24" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<application android:label="Food Diary" android:icon="@drawable/Icon"></application>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<application android:label="Meal Diary" android:icon="@drawable/Icon" android:windowSoftInputMode="adjustResize"></application>
 </manifest>
